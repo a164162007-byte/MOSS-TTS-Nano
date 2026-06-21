@@ -11,4 +11,4 @@ services:
       - ./models:/app/models
       - ./generated_audio:/app/generated_audio
     environment:
-      - HF_ENDPOINT=
+      - HF_ENDPOINT=https://hf-mirror.com
