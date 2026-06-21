@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  moss-tts-nano:
+    image: ghcr.io/a164162007-byte/moss-tts-nano:latest
+    container_name: moss-tts-nano
+    restart: unless-stopped
+    ports:
+      - "18083:18083"
+    volumes:
+      - ./models:/app/models
+      - ./generated_audio:/app/generated_audio
+    environment:
+      - HF_ENDPOINT=
