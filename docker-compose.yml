@@ -12,3 +12,5 @@ services:
       - ./generated_audio:/app/generated_audio
     environment:
       - HF_ENDPOINT=https://hf-mirror.com
+      - WEB_USER=peipei
+      - WEB_PASSWORD=li121314
