@@ -1,4 +1,4 @@
-FROM python:3.10-slim AS base
+FROM python:3.12-slim AS base
 
 WORKDIR /app
 
@@ -14,6 +14,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
+RUN pip install --no-cache-dir -e .
 
 RUN mkdir -p /app/models /app/generated_audio /app/.app_prompt_uploads
 RUN chmod +x /app/entrypoint.sh
